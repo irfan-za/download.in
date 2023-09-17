@@ -1,13 +1,13 @@
 const downloadForm = document.getElementById('downloadForm');
 const downloadMessage = document.getElementById("downloadMessage");
 const downloadButton = document.getElementById("downloadButton");
-
+const API_URL = "https://ytdownloader-pi.vercel.app"
 downloadForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   downloadButton.disabled=true;
   const videoURL = document.getElementById("videoURL").value;
   const resolution = document.getElementById("resolution").value;
-  const response = await fetch("https://ytdownloader-pi.vercel.app", {
+  const response = await fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
