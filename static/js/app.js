@@ -17,11 +17,11 @@ downloadForm.addEventListener("submit", async (e) => {
   .then(async(response)=>{
     if(response.ok){
     const data = await response.json();
-    downloadMessage.innerHTML = `<p class='text-green-500'>${data.message}</p>`;
+    downloadMessage.innerHTML = `<div class="mt-4 text-lg px-4 py-1 rounded-md bg-slate-100 dark:bg-white font-medium inline-block"><p class='text-green-500'>${data.message}</p></div>`;
     }
     else {
       const data = await response.json();
-      downloadMessage.innerHTML = `<p class='text-red-500 font-medium'>Error :${data.error } <br> Silahkan coba Url berbeda atau coba beberapa saat lagi.</p>`;
+      downloadMessage.innerHTML = `<div class="mt-4 text-lg px-4 py-1 rounded-md bg-slate-100 dark:bg-white font-medium inline-block"><p class='text-red-500 font-medium'>Error :${data.error } <br> Silahkan coba Url berbeda atau coba beberapa saat lagi.</p></div>`;
     }
   })
   .finally(()=>{
