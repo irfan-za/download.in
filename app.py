@@ -17,7 +17,7 @@ def download_video():
             stream = yt.streams.filter(only_audio=True).first()
         else:
             stream = yt.streams.filter(res=f"{resolution}p").first()
-        stream.download(output_path="C:/Users/irfan/Downloads")
+        stream.download()
         return jsonify({"message": "Video berhasil diunduh!"}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 400
