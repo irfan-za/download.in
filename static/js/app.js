@@ -7,7 +7,7 @@ downloadForm.addEventListener("submit", async (e) => {
   downloadButton.dosabled=true;
   const videoURL = document.getElementById("videoURL").value;
   const resolution = document.getElementById("resolution").value;
-  const response = await fetch("http://127.0.0.1:5000", {
+  const response = await fetch("https://irfan12.pythonanywhere.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
