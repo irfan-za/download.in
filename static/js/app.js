@@ -4,7 +4,7 @@ const downloadButton = document.getElementById("downloadButton");
 
 downloadForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  downloadButton.dosabled=true;
+  downloadButton.disabled=true;
   const videoURL = document.getElementById("videoURL").value;
   const resolution = document.getElementById("resolution").value;
   const response = await fetch("https://irfan12.pythonanywhere.com", {
