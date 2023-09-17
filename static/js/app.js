@@ -7,7 +7,7 @@ downloadForm.addEventListener("submit", async (e) => {
   downloadButton.disabled=true;
   const videoURL = document.getElementById("videoURL").value;
   const resolution = document.getElementById("resolution").value;
-  const response = await fetch("https://irfan12.pythonanywhere.com", {
+  const response = await fetch("https://ytdownloader-pi.vercel.app", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
