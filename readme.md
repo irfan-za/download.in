@@ -5,4 +5,9 @@ Download.in adalah layanan downloader video dan audio YouTube yang memungkinkan 
 
 ### Cara menggunakan :
 1. Sesuaikan value API_URL pada `file /static/js/app.js`
-2. Buka file HTML di browser dan masukkan URL youtube yang ingin di download, kemudian klik unduh.
+2. pastikan sudah menginstall Flask. Apabila belum, caranya jalankan kode ini di terminal :
+    - install .venv `py -3 -m venv .venv`
+    - aktivasi environment-nya `.venv\Scripts\activate`
+    - install Flask `pip install Flask`
+3. Install requirements `pip install -r requirements.txt`
+4. Buka file HTML di browser dan masukkan URL youtube yang ingin di download, kemudian klik unduh.
